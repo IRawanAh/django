@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Index</title>
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'random_word/css/style.css' %}">    
+    </head>
+    <body>
+      <h2>Random Word (attempt #{{request.session.counter}}) </h2>
+      <h1>{{unique_id}}</h1>
+      <form action="/random_word" method="post">
+        {% csrf_token %}
+      <button type ="submit">Generate</button>
+     </form>
+    </body>
