@@ -19,5 +19,6 @@ from django.contrib import admin
 urlpatterns = [
      url(r'^', include('apps.my_app.urls')),
      url(r'^', include('apps.random_word.urls')),
+     url(r'^', include('apps.ninja_gold.urls'))
 ]
 
