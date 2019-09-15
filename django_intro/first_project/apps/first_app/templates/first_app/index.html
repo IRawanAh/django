@@ -1,0 +1,9 @@
+<h1>Info From Server:</h1>
+<p>Name: {{name}}</p>
+<p>Color: {{favorite_color}}</p>
+<p>Pets</p>
+<ul>
+{% for pet in pets %}
+   <li>{{pet}}</li>
+{% endfor %}
+</ul>
