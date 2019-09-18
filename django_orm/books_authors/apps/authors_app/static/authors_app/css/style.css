@@ -1,0 +1,16 @@
+form{
+    display: inline-block;
+}
+div {
+    display: inline-block;
+    height: 250px;
+    width: 250px;
+}
+body{
+    text-align: center !important;
+}
+.card1{
+    border:black 1px solid;
+    border-radius: 20px;
+    padding-top: 50px;
+}

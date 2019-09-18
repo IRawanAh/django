@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Index</title>
+      {% load static %}
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="{% static 'authors_app/css/style.css' %}">    
+
+    </head>
+    <body>
+      <div class="container">
+        <h1>Add Author</h1>
+
+        <form action="/" method="POST" >
+            {% csrf_token %} 
+        <label>First name</label>
+        <input type="text" name="first_name"/>
+        <label>Last Name</label> 
+        <input type="text" name="last_name"/>  
+        <label>Notes</label>     
+        <input type="textarea" name="notes"/>
+
+          <button class="btn btn-info" type="submit">Add</button>       
+              </div>
+               </form>
+<table>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Action</th>
+    {% for author in all_the_authors %}
+    <tr>
+    <td>{{ author.id }}</td>
+    <td>{{ author.first_name }}{{ author.last_name }} </td>
+    <td><a href="/authors/{{author.id}}" >View</a><td>
+</tr>
+{% endfor %}
+
+</table>
+
+    </div>
+</body>
+
